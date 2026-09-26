@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>2026年江苏省环卫作业技能比赛理论知识复习题库 - 多选题 1-30</title><style>
+:root{
+  --primary:#C3B3FF;--primary-dark:#7667C8;--panel-bg:#EFEAFF;--panel-border:#D8CEF5;
+  --card:#fff;--text:#272438;--muted:#716B82;--btn:#7667C8;--btn-hover:#6657BA;
+  --green:#4CAF50;--green-bg:#C8E6C9;--green-text:#1B5E20;
+  --red:#F44336;--red-bg:#FFCDD2;--red-text:#B71C1C;
+  --selected:#F0EAFF;--shadow:0 3px 12px rgba(74,57,139,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--primary);color:var(--text);line-height:1.65;min-height:100vh;display:flex}
+button,input,textarea{font:inherit}
+.quiz-area{flex:1;min-width:0;max-width:calc(100vw - 340px);padding:16px}
+.page-head{background:var(--card);border-radius:14px;padding:16px 18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.page-head .title{font-size:20px;font-weight:700;letter-spacing:.02em}
+.page-head .sub{margin-top:4px;color:var(--muted);font-size:13px}
+.notice{margin-top:10px;padding:9px 11px;border-radius:8px;background:#FFF8E1;border:1px solid #F1D98B;color:#6B5312;font-size:13px}
+.question-card{background:var(--card);border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow);scroll-margin-top:16px;transition:outline .15s,box-shadow .15s}
+.question-card.current{outline:2px solid var(--primary-dark);outline-offset:2px}
+.question-header{font-size:13px;color:var(--primary-dark);font-weight:700;margin-bottom:8px}
+.question-stem{font-size:16px;color:var(--text);margin-bottom:12px;white-space:pre-wrap}
+.question-body{display:flex;gap:16px;align-items:flex-start;margin-bottom:12px}
+.question-body .question-stem{flex:1;margin-bottom:0}
+.question-images{flex:0 0 40%;max-width:40%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.question-images img{width:100%;height:auto;max-height:260px;object-fit:contain;border-radius:8px;border:1px solid var(--panel-border);background:#FAFAFA;cursor:zoom-in}
+.options{display:flex;flex-direction:column;gap:8px}
+.options.locked .option{pointer-events:none}
+.option{position:relative;padding:10px 14px;border:1px solid var(--panel-border);border-radius:8px;background:#fff;cursor:pointer;transition:background .15s,border-color .15s,transform .08s;font-size:15px;color:var(--text);user-select:none}
+.option:hover{background:#F7F4FF}
+.option:active{transform:scale(.998)}
+.option.correct{background:var(--green-bg);border-color:var(--green);color:var(--green-text)}
+.option.wrong{background:var(--red-bg);border-color:var(--red);color:var(--red-text)}
+.option.selected{border:2px solid var(--primary-dark);background:var(--selected);padding-left:13px}
+.option.selected::after{content:"✓";position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--primary-dark);font-weight:800;font-size:16px}
+.options.judgment{flex-direction:row}
+.options.judgment .option{flex:1;text-align:center}
+.question-unavailable{padding:10px 12px;border-radius:8px;background:#F5F4F8;color:var(--muted);font-size:13px;border:1px dashed var(--panel-border)}
+.fill-stem{font-size:16px;line-height:2;margin-bottom:12px}
+.fill-inputs{display:flex;flex-wrap:wrap;gap:10px 14px;margin-bottom:12px}
+.fill-input-item{display:flex;align-items:center;gap:6px}
+.blank-label{font-weight:700;color:var(--primary-dark);min-width:24px}
+.fill-input-item input{width:180px;max-width:55vw;padding:7px 9px;border:1px solid var(--panel-border);border-radius:7px;font-size:14px}
+.fill-input-item input:focus{outline:2px solid var(--primary-dark);border-color:transparent}
+.fill-input-item input.correct{border-color:var(--green);background:var(--green-bg)}
+.fill-input-item input.wrong{border-color:var(--red);background:var(--red-bg)}
+.fill-submit{padding:8px 18px;border:none;border-radius:8px;background:var(--btn);color:#fff;cursor:pointer}
+.fill-submit:hover{background:var(--btn-hover)}
+.fill-submit:disabled{background:#D8CCFF;color:#9A90B7;cursor:default}
+.info-panel{width:340px;height:100vh;position:sticky;top:0;background:var(--panel-bg);border-left:1px solid var(--panel-border);display:flex;flex-direction:column;flex-shrink:0}
+.panel-body{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.number-list-wrap{padding:12px;border-bottom:1px solid var(--panel-border);max-height:40vh;overflow-y:auto}
+.analysis-wrap{padding:12px;flex:1;overflow-y:auto;border-bottom:1px solid var(--panel-border)}
+.section-title{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:8px}
+.number-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px}
+.num-item{padding:7px 4px;text-align:center;border-radius:7px;background:#fff;border:1px solid var(--panel-border);font-size:12px;cursor:pointer;transition:background .15s,border-color .15s;color:var(--text);user-select:none}
+.num-item:hover{background:#F7F4FF}
+.num-item.correct{background:var(--green-bg);border-color:var(--green);color:var(--green-text)}
+.num-item.wrong{background:var(--red-bg);border-color:var(--red);color:var(--red-text)}
+.num-item.current{outline:2px solid var(--primary-dark);outline-offset:1px}
+.analysis{font-size:14px;line-height:1.7;color:var(--text)}
+.analysis:empty::before{content:"点击题号查看解析";color:var(--muted);font-size:13px}
+.analysis .my-answer{font-weight:700;margin-bottom:6px}
+.analysis .my-answer.correct{color:var(--green-text)}
+.analysis .my-answer.wrong{color:var(--red-text)}
+.analysis-line{margin-bottom:4px}
+.meta{color:var(--muted);font-size:13px}
+.nav-buttons{display:flex;gap:8px;padding:12px;border-top:1px solid var(--panel-border)}
+.progress-buttons{display:flex;gap:6px;padding:0 12px 12px}
+.btn{flex:1;padding:8px 10px;border:none;border-radius:8px;background:var(--btn);color:#fff;text-align:center;text-decoration:none;font-size:13px;cursor:pointer;transition:filter .12s}
+.btn:hover{filter:brightness(1.06)}
+.btn.disabled{background:#D8CCFF;color:#9A90B7;pointer-events:none;cursor:default}
+.btn.small{padding:7px 6px;font-size:12px}
+.panel-bar{display:none}
+.modal{display:none;position:fixed;inset:0;background:rgba(38,30,74,.52);z-index:500;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modal-content{background:#fff;border-radius:12px;padding:18px;width:100%;max-width:560px;max-height:82vh;display:flex;flex-direction:column}
+.modal-content h3{font-size:17px;margin-bottom:10px}
+.modal-content textarea{width:100%;min-height:240px;padding:9px;border:1px solid var(--panel-border);border-radius:8px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;resize:vertical;margin-bottom:10px}
+.modal-buttons{display:flex;gap:8px}
+.image-modal img{max-width:100%;max-height:76vh;object-fit:contain;border-radius:8px}
+.home-link{display:inline-block;margin-top:10px;color:var(--primary-dark);text-decoration:none;font-size:13px}
+@media(max-width:900px){
+  body{display:block;padding-bottom:60px}
+  .quiz-area{max-width:none;padding:12px}
+  .page-head{padding:14px}
+  .question-body{flex-direction:column}
+  .question-images{width:100%;max-width:100%;flex:0 0 auto;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .question-images img{max-height:210px}
+  .info-panel{position:fixed;left:0;right:0;bottom:0;top:auto;width:100%;height:auto;max-height:75vh;border-left:none;border-top:1px solid var(--panel-border);border-radius:16px 16px 0 0;box-shadow:0 -4px 18px rgba(55,44,105,.16);z-index:100}
+  .panel-body{display:none}
+  .info-panel.expanded .panel-body{display:flex;max-height:calc(75vh - 56px);overflow-y:auto}
+  .panel-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;height:56px}
+  .toggle-btn{padding:7px 13px;border:none;border-radius:8px;background:var(--btn);color:#fff;font-size:13px;cursor:pointer;white-space:nowrap}
+  .panel-bar .nav-buttons{flex:1;padding:0;border:none}
+  .panel-body .nav-buttons{display:none}
+  .number-list-wrap{max-height:none;overflow:visible}
+  .analysis-wrap{max-height:none;overflow:visible;flex:none}
+  .progress-buttons{padding-bottom:12px}
+}
+@media(max-width:480px){
+  .question-stem,.fill-stem{font-size:15px}
+  .option{font-size:14px}
+  .fill-input-item input{width:150px;max-width:48vw}
+  .number-list{grid-template-columns:repeat(auto-fill,minmax(48px,1fr))}
+}
+</style></head>
+<body>
+<main class="quiz-area" id="quizArea">
+  <section class="page-head" id="pageHead">
+    <div class="title" id="pageTitle"></div>
+    <div class="sub" id="pageSub"></div>
+  </section>
+</main>
+<aside class="info-panel" id="infoPanel">
+  <div class="panel-body">
+    <div class="number-list-wrap"><div class="section-title">题号</div><div class="number-list" id="numberList"></div></div>
+    <div class="analysis-wrap"><div class="section-title">解析</div><div class="analysis" id="analysis"></div></div>
+    <div class="nav-buttons"><a class="btn" id="prevBtn">上一页</a><a class="btn" id="nextBtn">下一页</a></div>
+    <div class="progress-buttons">
+      <button class="btn small" id="exportBtn">导出进度</button>
+      <button class="btn small" id="importBtn">导入进度</button>
+      <button class="btn small" id="clearBtn">清空进度</button>
+    </div>
+  </div>
+  <div class="panel-bar"><button class="toggle-btn" id="toggleBtn">展开</button>
+    <div class="nav-buttons"><a class="btn" id="prevBtnM">上一页</a><a class="btn" id="nextBtnM">下一页</a></div>
+  </div>
+</aside>
+<div class="modal" id="modal"><div class="modal-content"><h3 id="modalTitle">进度</h3>
+  <textarea id="modalTextarea"></textarea><div class="modal-buttons" id="modalButtons"></div>
+</div></div>
+<div class="modal image-modal" id="imageModal" onclick="this.classList.remove('show')"><div class="modal-content" onclick="event.stopPropagation()">
+  <img id="imagePreview" alt="题目图片预览" style="display:block;max-width:100%;max-height:76vh;margin:auto;object-fit:contain;border-radius:8px">
+</div></div>
+<script type="application/json" id="quizData">[{"id":"multi-001","type":"multi","globalNumber":1,"stem":"形成火灾的，应及时报警。对突然发生的比较轻微的火情，大家也应掌握简便易行的，应付紧急情况的方法。下列方法中可行的是：（ ）","images":[],"options":{"A":"用土、沙子、浸湿的棉被或毛毯等迅速覆盖在起火处，可以有效地灭火。","B":"用扫帚、拖把等扑打，也能扑灭小火。","C":"煤气起火，可用水迅速浇灭。","D":"电器起火，不可用水扑救，也不可用潮湿的物品捂盖。水是导体，这样做会发生触电。正确的方法是首先切断电源，然后再灭火。"},"answer":["A","B","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-002","type":"multi","globalNumber":2,"stem":"电器火灾的扑救方法及注意事项有：（ ）","images":[],"options":{"A":"立即关机，拔掉电源插头或拉下总闸，切断电源。","B":"发现是导线或电器外壳的可燃物着火，用棉被等覆盖物封闭窒息灭火。","C":"用二氧化碳、干粉灭火器灭火。","D":"用水灭火。"},"answer":["A","B","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-003","type":"multi","globalNumber":3,"stem":"交通事故报警时，应当注意：（ ）","images":[],"options":{"A":"发生道路交通事故时，事故当事人、知情人应在第一时间拨打122电话报警。","B":"报警时，应准确地描述事故发生地点、事故类型、现场概况、人员伤亡等情况。","C":"铁路、水运、航空运输过程中发生事故，应及时向有关部门报告。","D":"如果发现有肇事逃逸，要准确记住肇事车辆的特征和车牌号码。"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-004","type":"multi","globalNumber":4,"stem":"单位应当保障疏通通道、安全出口畅通，并设置符合国家规定的消防安全疏散标志和应急照明设施，保持防火门、防火卷帘、消防安全疏散指示标志、应急照明、机械排烟送风、火灾事故广播等设施处于正常状态。严禁下列行为：（ ）","images":[],"options":{"A":"占用疏通通道。","B":"在安全出口或者疏散通道上安装栅栏等影响疏散的障碍物。","C":"在营业、生产、教学、工作等期间将安全出口上锁、遮挡或者将消防安全疏散指示标志遮挡、覆盖。","D":"在楼梯间存放杂物、清洁工具、自行车等。"},"answer":["A","B","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-005","type":"multi","globalNumber":5,"stem":"要建立起一个完善的生产经营单位安全生产责任制，需要达到的要求（ ）：","images":[],"options":{"A":"建立的安全生产责任制必须符合国家安全生产法律法规和政策、方针的要求，并应适时修订；安全生产责任制体系要与生产经营单位管理体制协调一致。","B":"制定安全生产责任制要根据本单位、部门、班组、岗位的实际情况，明确、具体，具有可操作性，防止形式主义。","C":"制定、落实安全生产责任制要有专门的人员与机构来保障。","D":"在建立安全生产责任制的同时建立安全生产责任制的监督、检查等制度，特别要注意发挥职工群众的监督作用，以保证安全生产责任制得到真正落实。"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-006","type":"multi","globalNumber":6,"stem":"安全生产投入主要用于以下哪些方面：（ ）","images":[],"options":{"A":"建设安全技术措施工程，如防火工程、通风工程等；","B":"增设新安全设备、器材、装备、仪器、仪表等以及这些安全设备的日常维护；","C":"重大安全生产课题的研究；按国家标准为职工配备劳动保护用品；","D":"职工的安全生产教育和培训；其他有关预防事故发生的安全技术措施费用，如用于制定及落实生产事故应急救援预案等。"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-007","type":"multi","globalNumber":7,"stem":"安全生产检查的方法是哪三种？ （ ）","images":[],"options":{"A":"经验检查法","B":"常规检查","C":"安全检查表法","D":"仪器检查法"},"answer":["B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-008","type":"multi","globalNumber":8,"stem":"编制安全检查表主要依据：（ ）","images":[],"options":{"A":"有关标准、规程、规范及规定。","B":"国内外事故案例及本单位在安全管理及生产中的有关经验。","C":"通过系统分析，确定的危险部位及防范措施，都是安全检查表的内容。","D":"新知识、新成果，新方法、新技术、新法规和标准。"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-009","type":"multi","globalNumber":9,"stem":"实施安全检查的内容有：（ ）","images":[],"options":{"A":"访谈","B":"查阅文件和记录","C":"现场观察","D":"仪器测量"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-010","type":"multi","globalNumber":10,"stem":"职工有下列情形之一的，应当认定为工伤或视同工伤（ ）","images":[],"options":{"A":"工作时间前后在工作场所内，从事与工作有关的预备性或者收尾性工作受到事故伤害的；","B":"在工作时间和工作场所内，因履行工作职责受到暴力等意外伤害的；","C":"在上下班途中，受到机动车事故伤害的；","D":"患职业病的；"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-011","type":"multi","globalNumber":11,"stem":"公安部《机动车驾驶证申领和使用规定》（91号令）机动车驾驶人有下列违法行为之一，一次记12分的有：（ ）","images":[],"options":{"A":"驾驶与准驾车型不符的机动车的。","B":"机动车在高速公路或者城市快速路上遇交通拥堵，占用应急车道行驶的。","C":"饮酒后或者醉酒后驾驶机动车的。","D":"造成交通事故后逃逸，尚不构成犯罪的。"},"answer":["A","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-012","type":"multi","globalNumber":12,"stem":"公安部《机动车驾驶证申领和使用规定》（91号令）机动车驾驶人有下列违法行为之一，一次记6分的有：（ ）","images":[],"options":{"A":"机动车驾驶证被暂扣期间驾驶机动车的。","B":"违反禁令标志、禁止标线指示的。","C":"上道路行驶的机动车未悬挂机动车号牌的。","D":"在高速公路上倒车、逆行、穿越中央分隔带掉头的。"},"answer":["A","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-013","type":"multi","globalNumber":13,"stem":"公安部《机动车驾驶证申领和使用规定》（91号令）机动车驾驶人有下列违法行为之一，一次记3分的有：（ ）","images":[],"options":{"A":"故意遮挡、污损、不按规定安装机动车号牌的。","B":"违反道路交通信号灯通行的。","C":"在道路上车辆发生故障、事故停车后，不按规定使用灯光或设置警告标志的。","D":"上道路行驶的机动车未按规定定期进行安全技术检验的。"},"answer":["B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-014","type":"multi","globalNumber":14,"stem":"公安部《机动车驾驶证申领和使用规定》（91号令）机动车驾驶人有下列违法行为之一，一次记2分的有：（ ）","images":[],"options":{"A":"有拨打、接听手持电话等妨碍安全驾驶的行为的。","B":"行经交叉路口不按规定行车或者停车的。","C":"机动车在高速公路或者城市快速路上行驶时，机动车驾驶人未按规定系安全带的。","D":"遇前方机动车停车排队或者缓慢行驶时，借道超车或者占用对面车道、穿插等候车辆的。"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-015","type":"multi","globalNumber":15,"stem":"公安部《机动车驾驶证申领和使用规定》（91号令）机动车逆向行驶的应对交通违法行为人处：（ ）","images":[],"options":{"A":"罚款200元","B":"罚款100元","C":"扣3分","D":"拘留3天"},"answer":["A","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-016","type":"multi","globalNumber":16,"stem":"《中华人民共和国道路交通安全法》规定：驾驶机动车上道路行驶，应当悬挂机动车号牌，放置检验合格标志、保险标志，并随车携带机动车行驶证。（ ）","images":[],"options":{"A":"罚款200元","B":"扣1分","C":"扣2分","D":"罚款100元"},"answer":["A","B"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-017","type":"multi","globalNumber":17,"stem":"造成液压系统管路漏油的原因有哪些？（ ）","images":[],"options":{"A":"管接头松动","B":"密封圈或组合垫损坏","C":"油箱或管道裂纹","D":"齿轮泵损坏"},"answer":["A","B","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-018","type":"multi","globalNumber":18,"stem":"造成扫盘转速过低或不转的原因有哪些？（ ）","images":[],"options":{"A":"扫刷过长","B":"调速节流阀开度过大","C":"电磁换向阀卡滞","D":"液压马达或液压泵磨损或卡滞"},"answer":["B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-019","type":"multi","globalNumber":19,"stem":"以下哪些措施是解决后门开关动作控制失灵，后门密封效果差的有效方法（ ）","images":[],"options":{"A":"清洗或更换液压锁","B":"更换油缸密封件","C":"更换后门密封条","D":"更换后门"},"answer":["A","B","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-020","type":"multi","globalNumber":20,"stem":"液压系统发热严重时应如何解决？（ ）","images":[],"options":{"A":"添加液压油或更换液压油","B":"更换齿轮泵","C":"调整溢流压力盒节流阀开度，清除管路堵塞","D":"降低副发动机转速，调整减小扫刷压地力"},"answer":["A","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-021","type":"multi","globalNumber":21,"stem":"电路通常有几种状态？（ ）","images":[],"options":{"A":"通路","B":"断路","C":"短路","D":"接触不良"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-022","type":"multi","globalNumber":22,"stem":"《道路交通安全法》的基本原则，是（ ）。","images":[],"options":{"A":"依法管理","B":"保障安全","C":"方便群众","D":"有法可依"},"answer":["A","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-023","type":"multi","globalNumber":23,"stem":"加强对行车事故的预防与控制，应从（ ）三个方面入手，采取相应措施。","images":[],"options":{"A":"安全教育","B":"安全管理","C":"安全技术","D":"安全应用"},"answer":["A","B","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-024","type":"multi","globalNumber":24,"stem":"汽车的行驶阻力有（ ）。","images":[],"options":{"A":"滚动阻力","B":"空气阻力","C":"坡道阻力","D":"加速阻力"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-025","type":"multi","globalNumber":25,"stem":"排气制动装置是利用（ ）而产生减速制动作用的。","images":[],"options":{"A":"发动机的各种功率损失","B":"刹车","C":"吸收（消耗）汽车的惯性能量","D":"挂抵挡"},"answer":["A","C"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-026","type":"multi","globalNumber":26,"stem":"发动机突然过热的原因主要有哪些？（ ）","images":[],"options":{"A":"风扇皮带断裂","B":"节温器主阀门脱落致使冷却液不能进行大循环，或冷却水严重漏水","C":"水泵轴与叶轮脱转","D":"气缸垫烧穿或缸盖出现裂缝，高温气体进入冷却系"},"answer":["A","B","C","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-027","type":"multi","globalNumber":27,"stem":"《道路交通安全法》的指导思想是保障道路交通（ ）。","images":[],"options":{"A":"有序","B":"安全","C":"与国际接轨","D":"畅通"},"answer":["A","B","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-028","type":"multi","globalNumber":28,"stem":"汽车制动时的方向稳定性即制动时车辆不发生（ ）、（ ）以及失去（ ）的性能。","images":[],"options":{"A":"跑偏","B":"侧滑","C":"甩尾","D":"转向能力。"},"answer":["A","B","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-029","type":"multi","globalNumber":29,"stem":"交通事故的责任认定主要是分析交通违法行为，目前将交通违法行为划分为（ ）这三类。","images":[],"options":{"A":"主动型","B":"被动型","C":"过失型","D":"盲目型","E":"缺失型"},"answer":["A","B","E"],"analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"multi-030","type":"multi","globalNumber":30,"stem":"发动机按冷却方式的不同，可分为（ ）。","images":[],"options":{"A":"风冷发动机","B":"气冷发动机","C":"直冷发动机","D":"水冷发动机"},"answer":["A","D"],"analysis":"未提供","source":"未提供","difficulty":"未提供"}]</script>
+<script>
+const STORAGE_KEY = "enviro_quiz_progress_v1";
+const KNOWN_PAGES = ["index.html", "choice_1-50.html", "choice_51-100.html", "choice_101-150.html", "choice_151-200.html", "multi_1-30.html", "judgment_1-50.html", "judgment_51-100.html", "judgment_101-150.html", "judgment_151-170.html", "fill_1-50.html", "fill_51-70.html"];
+const PAGE_CONFIG = {"file":"multi_1-30.html","type":"multi","typeLabel":"多选题","lo":1,"hi":30,"prevUrl":"choice_151-200.html","nextUrl":"judgment_1-50.html","title":"2026年江苏省环卫作业技能比赛理论知识复习题库","missingText":null};
+const QUESTIONS = JSON.parse(document.getElementById("quizData").textContent);
+
+function defaultState(){
+  return {version:1, savedAt:null, questions:{}, currentFile:PAGE_CONFIG.file, currentQuestionId:QUESTIONS[0]?.id || null};
+}
+function loadState(){
+  try{
+    const raw=localStorage.getItem(STORAGE_KEY);
+    if(!raw) return defaultState();
+    const obj=JSON.parse(raw);
+    if(!obj || typeof obj!=="object") return defaultState();
+    if(!obj.questions || typeof obj.questions!=="object") obj.questions={};
+    return {...defaultState(),...obj};
+  }catch(e){ return defaultState(); }
+}
+let state=loadState();
+
+function saveState(){
+  state.version=1;
+  state.savedAt=new Date().toISOString();
+  try{ localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); }catch(e){}
+}
+function htmlEscape(v){
+  return String(v??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+}
+function normalizeText(s){
+  return String(s??"").trim()
+    .replace(/　/g," ")
+    .replace(/[！-～]/g,ch=>String.fromCharCode(ch.charCodeAt(0)-0xFEE0))
+    .replace(/[\u2018\u2019\u201B]/g,"'")
+    .replace(/[\u201C\u201D\u201F]/g,'"')
+    .replace(/[。．]/g,".")
+    .replace(/，/g,",")
+    .replace(/：/g,":")
+    .replace(/[；;]/g,";")
+    .toLowerCase();
+}
+function typeLabel(q){
+  return q.type==="multi"?"多选题":q.type==="judgment"?"判断题":q.type==="fill"?"填空题":"选择题";
+}
+function numberLabel(q){
+  const prefix=q.type==="multi"?"多":q.type==="judgment"?"判":q.type==="fill"?"填":"选";
+  return prefix+q.globalNumber;
+}
+function questionHeader(q){
+  return `${typeLabel(q)} 第${q.globalNumber}题`;
+}
+function isAnswered(q){
+  const s=state.questions[q.id];
+  return !!(s && s.answered);
+}
+function getQState(q){ return state.questions[q.id] || {}; }
+
+function clearAnalysis(){ document.getElementById("analysis").innerHTML=""; }
+function formatAnswer(q, ans){
+  if(ans==null) return "未提供";
+  if(q.type==="multi") return ans.length ? ans.join("、") : "未提供";
+  if(q.type==="judgment") return ans;
+  if(q.type==="fill") return ans.map((x,i)=>`${["①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩"][i]||`#${i+1}`} ${x}`).join("；");
+  return String(ans);
+}
+function showAnalysis(q){
+  const box=document.getElementById("analysis");
+  const s=getQState(q);
+  if(!s.answered){ box.innerHTML=""; return; }
+  const mine=s.myAnswer;
+  const correct = q.type==="fill" ? q.blanks : q.answer;
+  const cls=s.result==="correct"?"correct":"wrong";
+  box.innerHTML =
+    `<div class="my-answer ${cls}">我的答案：${htmlEscape(formatAnswer(q,mine))}</div>`+
+    `<div class="analysis-line"><b>正确答案：</b>${htmlEscape(formatAnswer(q,correct))}</div>`+
+    `<div class="analysis-line"><b>解析：</b>${htmlEscape(q.analysis||"未提供")}</div>`+
+    `<div class="analysis-line meta"><b>来源：</b>${htmlEscape(q.source||"未提供")}</div>`+
+    `<div class="analysis-line meta"><b>难度：</b>${htmlEscape(q.difficulty||"未提供")}</div>`;
+}
+function setCurrent(q, scrollIntoView=false){
+  state.currentFile=PAGE_CONFIG.file;
+  state.currentQuestionId=q.id;
+  saveState();
+  document.querySelectorAll(".question-card.current,.num-item.current").forEach(el=>el.classList.remove("current"));
+  const card=document.getElementById(q.id);
+  const num=document.querySelector(`.num-item[data-id="${CSS.escape(q.id)}"]`);
+  if(card) card.classList.add("current");
+  if(num) num.classList.add("current");
+  showAnalysis(q);
+  if(scrollIntoView && card) card.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function applyResultClass(el,q,key,s){
+  el.classList.remove("correct","wrong","selected");
+  if(q.type==="multi"){
+    if(s.answered){
+      if(q.answer.includes(key)) el.classList.add("correct");
+      else if(s.wrongKey===key) el.classList.add("wrong");
+    }else if((s.selected||[]).includes(key)){
+      el.classList.add("selected");
+    }
+  }else{
+    if(s.answered){
+      if(key===q.answer) el.classList.add("correct");
+      if(s.result==="wrong" && key!==q.answer) el.classList.add("wrong");
+    }
+  }
+}
+function updateNumberList(){
+  document.querySelectorAll(".num-item").forEach(btn=>{
+    const q=QUESTIONS.find(x=>x.id===btn.dataset.id);
+    const s=getQState(q);
+    btn.classList.remove("correct","wrong");
+    if(s.result==="correct") btn.classList.add("correct");
+    if(s.result==="wrong") btn.classList.add("wrong");
+  });
+}
+
+function renderQuestions(){
+  const area=document.getElementById("quizArea");
+  const frag=document.createDocumentFragment();
+  QUESTIONS.forEach(q=>{
+    const card=document.createElement("article");
+    card.className="question-card";
+    card.id=q.id;
+    const head=document.createElement("div");
+    head.className="question-header";
+    head.textContent=questionHeader(q);
+    card.appendChild(head);
+
+    if(q.type==="choice" || q.type==="choice-image"){
+      if(q.images?.length){
+        const body=document.createElement("div"); body.className="question-body";
+        const stem=document.createElement("div"); stem.className="question-stem"; stem.textContent=q.stem; body.appendChild(stem);
+        const imgs=document.createElement("div"); imgs.className="question-images";
+        q.images.forEach(src=>{
+          const img=document.createElement("img"); img.src=src; img.alt="题目图片"; img.addEventListener("click",()=>openImage(src)); imgs.appendChild(img);
+        });
+        body.appendChild(imgs); card.appendChild(body);
+      }else{
+        const stem=document.createElement("div"); stem.className="question-stem"; stem.textContent=q.stem; card.appendChild(stem);
+      }
+      const opts=document.createElement("div"); opts.className="options"; opts.dataset.qid=q.id;
+      Object.entries(q.options).forEach(([key,val])=>{
+        const el=document.createElement("div"); el.className="option"; el.dataset.key=key;
+        el.innerHTML=`<b>${htmlEscape(key)}.</b> ${htmlEscape(val)}`;
+        el.addEventListener("click",()=>answerChoice(q,key));
+        opts.appendChild(el);
+      });
+      card.appendChild(opts);
+    }else if(q.type==="multi"){
+      const stem=document.createElement("div"); stem.className="question-stem"; stem.textContent=q.stem; card.appendChild(stem);
+      const opts=document.createElement("div"); opts.className="options"; opts.dataset.qid=q.id;
+      Object.entries(q.options).forEach(([key,val])=>{
+        const el=document.createElement("div"); el.className="option"; el.dataset.key=key;
+        el.innerHTML=`<b>${htmlEscape(key)}.</b> ${htmlEscape(val)}`;
+        el.addEventListener("click",()=>answerMulti(q,key));
+        opts.appendChild(el);
+      });
+      card.appendChild(opts);
+    }else if(q.type==="judgment"){
+      const stem=document.createElement("div"); stem.className="question-stem"; stem.textContent=q.stem; card.appendChild(stem);
+      const s=getQState(q);
+      if(q.answer==null){
+        const note=document.createElement("div"); note.className="question-unavailable"; note.textContent="原题库未提供本题答案，无法自动判题；本题仅供查看。"; card.appendChild(note);
+      }
+      const opts=document.createElement("div"); opts.className="options judgment"; opts.dataset.qid=q.id;
+      Object.entries(q.options).forEach(([key,val])=>{
+        const el=document.createElement("div"); el.className="option"; el.dataset.key=key; 
+        el.innerHTML=`${htmlEscape(val)}`;
+        if(q.answer==null) el.style.pointerEvents="none";
+        else el.addEventListener("click",()=>answerChoice(q,key));
+        opts.appendChild(el);
+      });
+      card.appendChild(opts);
+    }else if(q.type==="fill"){
+      const stem=document.createElement("div"); stem.className="fill-stem"; stem.textContent=q.stem; card.appendChild(stem);
+      if(!q.blanks.length){
+        const note=document.createElement("div"); note.className="question-unavailable"; note.textContent="原题库正文没有提供空位标记，因此本题无法按填空题方式提交；题干按原文保留。"; card.appendChild(note);
+      }else{
+        const inputs=document.createElement("div"); inputs.className="fill-inputs";
+        q.blanks.forEach((_,i)=>{
+          const wrap=document.createElement("label"); wrap.className="fill-input-item";
+          const label=document.createElement("span"); label.className="blank-label"; label.textContent=["①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩"][i]||`${i+1}`;
+          const input=document.createElement("input"); input.type="text"; input.maxLength=20; input.dataset.index=i; input.setAttribute("autocomplete","off");
+          input.addEventListener("input",()=>{ 
+            const s=getQState(q); const arr=(s.myAnswer||q.blanks.map(()=>"" )).slice(); arr[i]=input.value; 
+            state.questions[q.id]={...s,myAnswer:arr}; saveState();
+          });
+          wrap.appendChild(label); wrap.appendChild(input); inputs.appendChild(wrap);
+        });
+        card.appendChild(inputs);
+        const btn=document.createElement("button"); btn.className="fill-submit"; btn.textContent="提交答案"; btn.addEventListener("click",()=>answerFill(q)); card.appendChild(btn);
+      }
+    }
+    card.addEventListener("click",e=>{
+      if(e.target.closest(".option") || e.target.tagName==="INPUT" || e.target.tagName==="BUTTON") return;
+      setCurrent(q,false);
+    });
+    frag.appendChild(card);
+  });
+  area.appendChild(frag);
+  restorePageUI();
+}
+function restorePageUI(){
+  QUESTIONS.forEach(q=>{
+    const card=document.getElementById(q.id);
+    const s=getQState(q);
+    const opts=card?.querySelector(".options");
+    if(opts){
+      if(s.answered) opts.classList.add("locked");
+      opts.querySelectorAll(".option").forEach(el=>applyResultClass(el,q,el.dataset.key,s));
+    }
+    if(q.type==="fill" && q.blanks.length){
+      const inputs=[...card.querySelectorAll("input")];
+      const arr=s.myAnswer||[];
+      inputs.forEach((input,i)=>{
+        input.value=arr[i]??"";
+        if(s.answered){
+          input.disabled=true;
+          input.classList.toggle("correct",s.blankResults?.[i]==="correct");
+          input.classList.toggle("wrong",s.blankResults?.[i]==="wrong");
+        }
+      });
+      const b=card.querySelector(".fill-submit");
+      if(b && s.answered) b.disabled=true;
+    }
+  });
+  updateNumberList();
+  let q=QUESTIONS.find(x=>x.id===state.currentQuestionId) || QUESTIONS[0];
+  if(q) setCurrent(q,false);
+}
+function answerChoice(q,key){
+  const s=getQState(q);
+  if(s.answered || q.answer==null) return;
+  const result=(key===q.answer)?"correct":"wrong";
+  state.questions[q.id]={answered:true,myAnswer:key,result,wrongKey:result==="wrong"?key:null};
+  state.currentFile=PAGE_CONFIG.file; state.currentQuestionId=q.id; saveState();
+  restorePageUI(); showAnalysis(q);
+}
+function answerMulti(q,key){
+  const s=getQState(q);
+  if(s.answered) return;
+  const selected=new Set(s.selected||[]);
+  if(q.answer.includes(key)){
+    if(selected.has(key)) selected.delete(key); else selected.add(key);
+    const arr=[...selected].sort((a,b)=>a.localeCompare(b));
+    if(q.answer.every(x=>selected.has(x)) && selected.size===q.answer.length){
+      state.questions[q.id]={answered:true,myAnswer:arr,result:"correct",selected:arr};
+    }else{
+      state.questions[q.id]={...s,selected:arr,answered:false};
+    }
+  }else{
+    state.questions[q.id]={answered:true,myAnswer:[...selected,key].sort((a,b)=>a.localeCompare(b)),result:"wrong",selected:[...selected,key],wrongKey:key};
+  }
+  state.currentFile=PAGE_CONFIG.file; state.currentQuestionId=q.id; saveState();
+  restorePageUI(); showAnalysis(q);
+}
+function answerFill(q){
+  const card=document.getElementById(q.id);
+  const inputs=[...card.querySelectorAll("input")];
+  const my=inputs.map(x=>x.value);
+  const results=my.map((x,i)=>normalizeText(x)===normalizeText(q.blanks[i])?"correct":"wrong");
+  const ok=results.every(x=>x==="correct");
+  state.questions[q.id]={answered:true,myAnswer:my,result:ok?"correct":"wrong",blankResults:results};
+  state.currentFile=PAGE_CONFIG.file; state.currentQuestionId=q.id; saveState();
+  restorePageUI(); showAnalysis(q);
+}
+function bindNumberList(){
+  const list=document.getElementById("numberList");
+  QUESTIONS.forEach(q=>{
+    const btn=document.createElement("div"); btn.className="num-item"; btn.textContent=numberLabel(q); btn.dataset.id=q.id;
+    btn.addEventListener("click",()=>setCurrent(q,true)); list.appendChild(btn);
+  });
+}
+function updateCurrentByScroll(){
+  let best=QUESTIONS[0],bestDist=1e9;
+  QUESTIONS.forEach(q=>{
+    const el=document.getElementById(q.id); if(!el) return;
+    const d=Math.abs(el.getBoundingClientRect().top-90);
+    if(d<bestDist){best=q;bestDist=d;}
+  });
+  if(best && state.currentQuestionId!==best.id){
+    state.currentFile=PAGE_CONFIG.file; state.currentQuestionId=best.id; saveState();
+    document.querySelectorAll(".question-card.current,.num-item.current").forEach(el=>el.classList.remove("current"));
+    document.getElementById(best.id)?.classList.add("current");
+    document.querySelector(`.num-item[data-id="${CSS.escape(best.id)}"]`)?.classList.add("current");
+    showAnalysis(best);
+  }
+}
+function openModal(mode){
+  const modal=document.getElementById("modal");
+  modal.classList.add("show");
+  const title=document.getElementById("modalTitle"), ta=document.getElementById("modalTextarea");
+  const buttons=document.getElementById("modalButtons");
+  buttons.innerHTML="";
+  if(mode==="export"){
+    title.textContent="导出刷题进度";
+    ta.value=JSON.stringify(state,null,2); ta.readOnly=true;
+    addModalButton("复制",async()=>{try{await navigator.clipboard.writeText(ta.value)}catch(e){ta.select();document.execCommand("copy")}},false);
+    addModalButton("下载 JSON",()=>downloadJSON(ta.value),false);
+  }else{
+    title.textContent="导入刷题进度";
+    ta.value=""; ta.readOnly=false; ta.placeholder="在此粘贴导出的 JSON";
+    addModalButton("导入并恢复",()=>{
+      let obj; try{obj=JSON.parse(ta.value)}catch(e){alert("JSON 格式无效，请检查后再试。");return}
+      if(!obj || typeof obj!=="object" || !obj.questions){alert("这不是可识别的刷题进度文件。");return}
+      if(!confirm("导入将覆盖当前刷题进度，确定继续吗？")) return;
+      state=obj; saveState(); modal.classList.remove("show");
+      const file=(KNOWN_PAGES.includes(state.currentFile)?state.currentFile:"index.html");
+      if(file==="index.html") location.href="index.html"; else location.href=file+(state.currentQuestionId?("#"+encodeURIComponent(state.currentQuestionId)):"");
+    },false);
+  }
+  addModalButton("关闭",()=>modal.classList.remove("show"),false);
+}
+function addModalButton(text,fn,disabled){
+  const b=document.createElement("button"); b.className="btn"; b.textContent=text; b.disabled=!!disabled; b.addEventListener("click",fn); document.getElementById("modalButtons").appendChild(b);
+}
+function downloadJSON(text){
+  const blob=new Blob([text],{type:"application/json;charset=utf-8"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="quiz_progress.json"; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function clearProgress(){
+  if(!confirm("确定清空全部刷题进度吗？此操作不可恢复。")) return;
+  try{localStorage.removeItem(STORAGE_KEY)}catch(e){}
+  state=defaultState(); location.reload();
+}
+function openImage(src){
+  const modal=document.getElementById("imageModal"); document.getElementById("imagePreview").src=src; modal.classList.add("show");
+}
+function go(url){
+  if(url) location.href=url; 
+}
+function setupNavigation(){
+  const prevBtns=[document.getElementById("prevBtn"),document.getElementById("prevBtnM")].filter(Boolean);
+  const nextBtns=[document.getElementById("nextBtn"),document.getElementById("nextBtnM")].filter(Boolean);
+  prevBtns.forEach(b=>{if(PAGE_CONFIG.prevUrl)b.addEventListener("click",()=>go(PAGE_CONFIG.prevUrl));else b.classList.add("disabled")});
+  nextBtns.forEach(b=>{if(PAGE_CONFIG.nextUrl)b.addEventListener("click",()=>go(PAGE_CONFIG.nextUrl));else b.classList.add("disabled")});
+}
+function setupMobilePanel(){
+  const panel=document.getElementById("infoPanel"),toggle=document.getElementById("toggleBtn");
+  if(!panel||!toggle) return;
+  toggle.addEventListener("click",()=>{panel.classList.toggle("expanded");toggle.textContent=panel.classList.contains("expanded")?"收起":"展开"});
+}
+function maybeRestoreHash(){
+  const id=decodeURIComponent(location.hash.replace(/^#/,""));
+  if(id){
+    const q=QUESTIONS.find(x=>x.id===id);
+    if(q) setCurrent(q,true);
+  }
+}
+function init(){
+  document.getElementById("pageTitle").textContent=PAGE_CONFIG.title;
+  document.getElementById("pageSub").textContent=`${PAGE_CONFIG.typeLabel} · 题号 ${PAGE_CONFIG.lo}-${PAGE_CONFIG.hi} · 本页实际 ${QUESTIONS.length} 题`;
+  if(PAGE_CONFIG.missingText){
+    const n=document.createElement("div"); n.className="notice"; n.textContent=PAGE_CONFIG.missingText; document.getElementById("pageHead").appendChild(n);
+  }
+  renderQuestions(); bindNumberList(); setupNavigation(); setupMobilePanel();
+  document.getElementById("exportBtn")?.addEventListener("click",()=>openModal("export"));
+  document.getElementById("importBtn")?.addEventListener("click",()=>openModal("import"));
+  document.getElementById("clearBtn")?.addEventListener("click",clearProgress);
+  document.getElementById("modalClose")?.addEventListener("click",()=>document.getElementById("modal").classList.remove("show"));
+  window.addEventListener("scroll",()=>{ if(!window.__scrollLock){ window.__scrollLock=true; requestAnimationFrame(()=>{updateCurrentByScroll();window.__scrollLock=false})}});
+  maybeRestoreHash();
+}
+document.addEventListener("DOMContentLoaded",init);
+</script>
+</body></html>

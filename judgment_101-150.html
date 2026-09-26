@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>2026年江苏省环卫作业技能比赛理论知识复习题库 - 判断题 101-150</title><style>
+:root{
+  --primary:#C3B3FF;--primary-dark:#7667C8;--panel-bg:#EFEAFF;--panel-border:#D8CEF5;
+  --card:#fff;--text:#272438;--muted:#716B82;--btn:#7667C8;--btn-hover:#6657BA;
+  --green:#4CAF50;--green-bg:#C8E6C9;--green-text:#1B5E20;
+  --red:#F44336;--red-bg:#FFCDD2;--red-text:#B71C1C;
+  --selected:#F0EAFF;--shadow:0 3px 12px rgba(74,57,139,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--primary);color:var(--text);line-height:1.65;min-height:100vh;display:flex}
+button,input,textarea{font:inherit}
+.quiz-area{flex:1;min-width:0;max-width:calc(100vw - 340px);padding:16px}
+.page-head{background:var(--card);border-radius:14px;padding:16px 18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.page-head .title{font-size:20px;font-weight:700;letter-spacing:.02em}
+.page-head .sub{margin-top:4px;color:var(--muted);font-size:13px}
+.notice{margin-top:10px;padding:9px 11px;border-radius:8px;background:#FFF8E1;border:1px solid #F1D98B;color:#6B5312;font-size:13px}
+.question-card{background:var(--card);border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow);scroll-margin-top:16px;transition:outline .15s,box-shadow .15s}
+.question-card.current{outline:2px solid var(--primary-dark);outline-offset:2px}
+.question-header{font-size:13px;color:var(--primary-dark);font-weight:700;margin-bottom:8px}
+.question-stem{font-size:16px;color:var(--text);margin-bottom:12px;white-space:pre-wrap}
+.question-body{display:flex;gap:16px;align-items:flex-start;margin-bottom:12px}
+.question-body .question-stem{flex:1;margin-bottom:0}
+.question-images{flex:0 0 40%;max-width:40%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.question-images img{width:100%;height:auto;max-height:260px;object-fit:contain;border-radius:8px;border:1px solid var(--panel-border);background:#FAFAFA;cursor:zoom-in}
+.options{display:flex;flex-direction:column;gap:8px}
+.options.locked .option{pointer-events:none}
+.option{position:relative;padding:10px 14px;border:1px solid var(--panel-border);border-radius:8px;background:#fff;cursor:pointer;transition:background .15s,border-color .15s,transform .08s;font-size:15px;color:var(--text);user-select:none}
+.option:hover{background:#F7F4FF}
+.option:active{transform:scale(.998)}
+.option.correct{background:var(--green-bg);border-color:var(--green);color:var(--green-text)}
+.option.wrong{background:var(--red-bg);border-color:var(--red);color:var(--red-text)}
+.option.selected{border:2px solid var(--primary-dark);background:var(--selected);padding-left:13px}
+.option.selected::after{content:"✓";position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--primary-dark);font-weight:800;font-size:16px}
+.options.judgment{flex-direction:row}
+.options.judgment .option{flex:1;text-align:center}
+.question-unavailable{padding:10px 12px;border-radius:8px;background:#F5F4F8;color:var(--muted);font-size:13px;border:1px dashed var(--panel-border)}
+.fill-stem{font-size:16px;line-height:2;margin-bottom:12px}
+.fill-inputs{display:flex;flex-wrap:wrap;gap:10px 14px;margin-bottom:12px}
+.fill-input-item{display:flex;align-items:center;gap:6px}
+.blank-label{font-weight:700;color:var(--primary-dark);min-width:24px}
+.fill-input-item input{width:180px;max-width:55vw;padding:7px 9px;border:1px solid var(--panel-border);border-radius:7px;font-size:14px}
+.fill-input-item input:focus{outline:2px solid var(--primary-dark);border-color:transparent}
+.fill-input-item input.correct{border-color:var(--green);background:var(--green-bg)}
+.fill-input-item input.wrong{border-color:var(--red);background:var(--red-bg)}
+.fill-submit{padding:8px 18px;border:none;border-radius:8px;background:var(--btn);color:#fff;cursor:pointer}
+.fill-submit:hover{background:var(--btn-hover)}
+.fill-submit:disabled{background:#D8CCFF;color:#9A90B7;cursor:default}
+.info-panel{width:340px;height:100vh;position:sticky;top:0;background:var(--panel-bg);border-left:1px solid var(--panel-border);display:flex;flex-direction:column;flex-shrink:0}
+.panel-body{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.number-list-wrap{padding:12px;border-bottom:1px solid var(--panel-border);max-height:40vh;overflow-y:auto}
+.analysis-wrap{padding:12px;flex:1;overflow-y:auto;border-bottom:1px solid var(--panel-border)}
+.section-title{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:8px}
+.number-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px}
+.num-item{padding:7px 4px;text-align:center;border-radius:7px;background:#fff;border:1px solid var(--panel-border);font-size:12px;cursor:pointer;transition:background .15s,border-color .15s;color:var(--text);user-select:none}
+.num-item:hover{background:#F7F4FF}
+.num-item.correct{background:var(--green-bg);border-color:var(--green);color:var(--green-text)}
+.num-item.wrong{background:var(--red-bg);border-color:var(--red);color:var(--red-text)}
+.num-item.current{outline:2px solid var(--primary-dark);outline-offset:1px}
+.analysis{font-size:14px;line-height:1.7;color:var(--text)}
+.analysis:empty::before{content:"点击题号查看解析";color:var(--muted);font-size:13px}
+.analysis .my-answer{font-weight:700;margin-bottom:6px}
+.analysis .my-answer.correct{color:var(--green-text)}
+.analysis .my-answer.wrong{color:var(--red-text)}
+.analysis-line{margin-bottom:4px}
+.meta{color:var(--muted);font-size:13px}
+.nav-buttons{display:flex;gap:8px;padding:12px;border-top:1px solid var(--panel-border)}
+.progress-buttons{display:flex;gap:6px;padding:0 12px 12px}
+.btn{flex:1;padding:8px 10px;border:none;border-radius:8px;background:var(--btn);color:#fff;text-align:center;text-decoration:none;font-size:13px;cursor:pointer;transition:filter .12s}
+.btn:hover{filter:brightness(1.06)}
+.btn.disabled{background:#D8CCFF;color:#9A90B7;pointer-events:none;cursor:default}
+.btn.small{padding:7px 6px;font-size:12px}
+.panel-bar{display:none}
+.modal{display:none;position:fixed;inset:0;background:rgba(38,30,74,.52);z-index:500;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modal-content{background:#fff;border-radius:12px;padding:18px;width:100%;max-width:560px;max-height:82vh;display:flex;flex-direction:column}
+.modal-content h3{font-size:17px;margin-bottom:10px}
+.modal-content textarea{width:100%;min-height:240px;padding:9px;border:1px solid var(--panel-border);border-radius:8px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;resize:vertical;margin-bottom:10px}
+.modal-buttons{display:flex;gap:8px}
+.image-modal img{max-width:100%;max-height:76vh;object-fit:contain;border-radius:8px}
+.home-link{display:inline-block;margin-top:10px;color:var(--primary-dark);text-decoration:none;font-size:13px}
+@media(max-width:900px){
+  body{display:block;padding-bottom:60px}
+  .quiz-area{max-width:none;padding:12px}
+  .page-head{padding:14px}
+  .question-body{flex-direction:column}
+  .question-images{width:100%;max-width:100%;flex:0 0 auto;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .question-images img{max-height:210px}
+  .info-panel{position:fixed;left:0;right:0;bottom:0;top:auto;width:100%;height:auto;max-height:75vh;border-left:none;border-top:1px solid var(--panel-border);border-radius:16px 16px 0 0;box-shadow:0 -4px 18px rgba(55,44,105,.16);z-index:100}
+  .panel-body{display:none}
+  .info-panel.expanded .panel-body{display:flex;max-height:calc(75vh - 56px);overflow-y:auto}
+  .panel-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;height:56px}
+  .toggle-btn{padding:7px 13px;border:none;border-radius:8px;background:var(--btn);color:#fff;font-size:13px;cursor:pointer;white-space:nowrap}
+  .panel-bar .nav-buttons{flex:1;padding:0;border:none}
+  .panel-body .nav-buttons{display:none}
+  .number-list-wrap{max-height:none;overflow:visible}
+  .analysis-wrap{max-height:none;overflow:visible;flex:none}
+  .progress-buttons{padding-bottom:12px}
+}
+@media(max-width:480px){
+  .question-stem,.fill-stem{font-size:15px}
+  .option{font-size:14px}
+  .fill-input-item input{width:150px;max-width:48vw}
+  .number-list{grid-template-columns:repeat(auto-fill,minmax(48px,1fr))}
+}
+</style></head>
+<body>
+<main class="quiz-area" id="quizArea">
+  <section class="page-head" id="pageHead">
+    <div class="title" id="pageTitle"></div>
+    <div class="sub" id="pageSub"></div>
+  </section>
+</main>
+<aside class="info-panel" id="infoPanel">
+  <div class="panel-body">
+    <div class="number-list-wrap"><div class="section-title">题号</div><div class="number-list" id="numberList"></div></div>
+    <div class="analysis-wrap"><div class="section-title">解析</div><div class="analysis" id="analysis"></div></div>
+    <div class="nav-buttons"><a class="btn" id="prevBtn">上一页</a><a class="btn" id="nextBtn">下一页</a></div>
+    <div class="progress-buttons">
+      <button class="btn small" id="exportBtn">导出进度</button>
+      <button class="btn small" id="importBtn">导入进度</button>
+      <button class="btn small" id="clearBtn">清空进度</button>
+    </div>
+  </div>
+  <div class="panel-bar"><button class="toggle-btn" id="toggleBtn">展开</button>
+    <div class="nav-buttons"><a class="btn" id="prevBtnM">上一页</a><a class="btn" id="nextBtnM">下一页</a></div>
+  </div>
+</aside>
+<div class="modal" id="modal"><div class="modal-content"><h3 id="modalTitle">进度</h3>
+  <textarea id="modalTextarea"></textarea><div class="modal-buttons" id="modalButtons"></div>
+</div></div>
+<div class="modal image-modal" id="imageModal" onclick="this.classList.remove('show')"><div class="modal-content" onclick="event.stopPropagation()">
+  <img id="imagePreview" alt="题目图片预览" style="display:block;max-width:100%;max-height:76vh;margin:auto;object-fit:contain;border-radius:8px">
+</div></div>
+<script type="application/json" id="quizData">[{"id":"judgment-101","type":"judgment","globalNumber":101,"stem":"发动机冷却水温低有利于保护机件磨损，延长使用寿命。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-102","type":"judgment","globalNumber":102,"stem":"定期清除燃烧室的积碳，可以避免爆燃和早燃的发生。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-103","type":"judgment","globalNumber":103,"stem":"发动机在低速小负荷状态下运行时，燃油一般能够充分燃烧不产生污染物。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-104","type":"judgment","globalNumber":104,"stem":"发动机在大负荷运行时，碳氢化合物生成量减少，氮氧化合物增加。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-105","type":"judgment","globalNumber":105,"stem":"日常作业过程中应根据不同车型，按照规定时间对主、副机空气滤芯进行吹灰保养，对水滤芯进行清洗保养。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-106","type":"judgment","globalNumber":106,"stem":"吸嘴装置由吸嘴、滚轮、吸管、多自由度升降机构等组成，为半悬浮挂式。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-107","type":"judgment","globalNumber":107,"stem":"机械化冲洗作业时不得漏洗，如路面较宽，应二次冲刷，不得倒车作业。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-108","type":"judgment","globalNumber":108,"stem":"城市道路机械化作业不应优先使用符合标准的地表水和再生水。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-109","type":"judgment","globalNumber":109,"stem":"作业人员应按规定的时间、线路、频次和作业模式进行作业；作业时无需穿戴统一、整洁、有警示标识的工作服。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-110","type":"judgment","globalNumber":110,"stem":"超载行驶使制动距离延长。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-111","type":"judgment","globalNumber":111,"stem":"超载行驶使操纵稳定性更好。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-112","type":"judgment","globalNumber":112,"stem":"干荷蓄电池有潮气进入单格后，电量就消耗。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-113","type":"judgment","globalNumber":113,"stem":"液压传动系统的组成：主要由液压动力元件、液压传动元件、液压控制元件、液压辅助元件四个部分组成。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-114","type":"judgment","globalNumber":114,"stem":"驾驶员安全教育的基本内容：技术安全知识教育、职业道德教育、针对性教育、生理、 心理与安全关系的教育。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-115","type":"judgment","globalNumber":115,"stem":"行车中应经常检查轮胎的使用情况防止轮胎异常磨损是很有必要的。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-116","type":"judgment","globalNumber":116,"stem":"柴油机比汽油机的经济性好。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-117","type":"judgment","globalNumber":117,"stem":"摩擦片沾油或磨损过甚会引起离合器打滑。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-118","type":"judgment","globalNumber":118,"stem":"变速器的档位越低，传动比越小，汽车的行驶速度越低。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-119","type":"judgment","globalNumber":119,"stem":"最佳的制动状态是车轮完全被抱死而发生滑移时。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-120","type":"judgment","globalNumber":120,"stem":"制动踏板自由行程过大，会造成制动不灵。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-121","type":"judgment","globalNumber":121,"stem":"只有经过专业培训的人员才可以安装轮胎。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-122","type":"judgment","globalNumber":122,"stem":"车辆每月更换燃油滤清器并清洗管路接头的滤网。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-123","type":"judgment","globalNumber":123,"stem":"清洗车辆时可以将水直接喷射到电器元件和油箱进气孔上。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-124","type":"judgment","globalNumber":124,"stem":"用户应建立每台车的使用、保养和维修记录，定期进行维护保养，不论用户所在地区的 实际使用条件如何，保养周期都是统一一致的。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"错误","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-125","type":"judgment","globalNumber":125,"stem":"例行保养是各级保养的基础，以清洁、检查为重点。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-126","type":"judgment","globalNumber":126,"stem":"扫路车应保持清洁，全部机构完整，无损坏现象，不允许带病作业。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-127","type":"judgment","globalNumber":127,"stem":"可借助驾驶室液压系统压力表的压力判断动作是否运行到位。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-128","type":"judgment","globalNumber":128,"stem":"扫路车后门开启时，为避免发生意外，后门底下不得站人。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-129","type":"judgment","globalNumber":129,"stem":"蓄电池液面长期不足；长时间连续使用起动机；经常充电不足或充电过量均能造成蓄 电池过早损坏。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-130","type":"judgment","globalNumber":130,"stem":"汽车底盘的保修手册作为保养和维修的凭据，需妥善保管，不得丢失，否则不能享受三包和首保。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-131","type":"judgment","globalNumber":131,"stem":"环卫机械化是使环卫工人摆脱繁重的体力劳动，提高劳动生产率，促进环卫产业的形成和发展的必要条件。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-132","type":"judgment","globalNumber":132,"stem":"环卫机械化是解决环境问题，实现可持续发展战略的必然要求。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-133","type":"judgment","globalNumber":133,"stem":"环卫机械化给科学技术的发展提供了一个新的领域，带动了一些相关产业的发展。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-134","type":"judgment","globalNumber":134,"stem":"扫路车具备自动控制二次扬尘污染的装置，扫刷转速、接地压力、内外摆动可实现动态无级调节等，可满足道路路面、作业环境、污染程度、物料对象等各种作业工况需求。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-135","type":"judgment","globalNumber":135,"stem":"清洗车多功能技术特性得到了不断发展和提高，基本功能特性为具有高压力、小流量水喷射清洗功能，喷水系统与行走系统的工作相互独立，喷水杆高度、摆动、伸缩可动态调节。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-136","type":"judgment","globalNumber":136,"stem":"作业车辆临时停车、加水时一定要正确摆放安全警示筒，驾驶员一定要在车后提醒过往行人注意避让，防止事故的发生。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-137","type":"judgment","globalNumber":137,"stem":"在转弯、匝（弯）道、上下桥坡等事故易发地段时，应严格控制车速，以防失控侧翻；同时仔细观察车身后侧行人及非机动车行驶情况，小心慢行。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-138","type":"judgment","globalNumber":138,"stem":"环卫机械化作业车辆具有着车身高，车载重的特点，在车辆行驶过程中应保持正常的车速，严禁超速行驶。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-139","type":"judgment","globalNumber":139,"stem":"遇到作业车辆抛锚时，在车辆能够移动的情况下，要及时将作业车辆移至不影响其它车辆通行的地方并在车后正确放置安全警示标志；若作业车辆不能移动必须要在车后正确放置安全警示标志，并提醒过往车辆注意避让，及时通知单位抢修或拖移抛锚车辆。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-140","type":"judgment","globalNumber":140,"stem":"作业车辆在高架等快速路停车作业时必须按照规范设置警示隔离区域，放置提示警示牌，由于高架道路是参照高速道路的交通管理模式，故此项作业（施工）必须严格按照有关规定做好警示防护措施。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-141","type":"judgment","globalNumber":141,"stem":"基于机械化作业车辆的结构特点，后视镜不能完全观察到四周路面的情况，存在一定的盲区，故作业车辆行至交叉路口、拐弯掉头处、以及在车辆倒车时一定要注意观察周围车辆及路面情况，减速慢行。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-142","type":"judgment","globalNumber":142,"stem":"机扫车辆作业时沿道路侧石边进行，当经过公交站点等人流量大的地点时一定要注意观察周边路人动态，避免工作装置伤害到他人。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-143","type":"judgment","globalNumber":143,"stem":"洒水车作业时也应注意来往行人及非机动车的动态情况，避免将水喷洒到路人身上。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-144","type":"judgment","globalNumber":144,"stem":"当气温≤5℃时，应暂停桥面、坡道、高架的冲洗及清洗作业；当气温≤2℃时，停止所有冲洗及清洗作业，道路清扫采用不喷水作业方式；冬季做好收车前排水操作，防止管路积水冻结从而损坏零件。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-145","type":"judgment","globalNumber":145,"stem":"城市道路环卫机械化作业实行道路等级作业方法，按照所属的道路等级实施作业，作业方式和频次可根据气候或其他特殊原因适当调整。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-146","type":"judgment","globalNumber":146,"stem":"出车前应检查制动系统及扫刷、吸盘、警示灯等作业装置，确保车辆性能良好。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-147","type":"judgment","globalNumber":147,"stem":"车辆沿两侧机动车道侧石平行作业。作业启动应严格按照放刷、喷水、调整箱体压力和刷盘转速、清扫的顺序进行操作；非特殊气候情况下，避免“干扫”；作业时禁止扫刷、吸嘴不落地。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"},{"id":"judgment-148","type":"judgment","globalNumber":148,"stem":"冬季作业完毕后，必须把全车各阀门打开放净水，防止冻裂阀门。","images":[],"options":{"正确":"正确","错误":"错误"},"answer":"正确","analysis":"未提供","source":"未提供","difficulty":"未提供"}]</script>
+<script>
+const STORAGE_KEY = "enviro_quiz_progress_v1";
+const KNOWN_PAGES = ["index.html", "choice_1-50.html", "choice_51-100.html", "choice_101-150.html", "choice_151-200.html", "multi_1-30.html", "judgment_1-50.html", "judgment_51-100.html", "judgment_101-150.html", "judgment_151-170.html", "fill_1-50.html", "fill_51-70.html"];
+const PAGE_CONFIG = {"file":"judgment_101-150.html","type":"judgment","typeLabel":"判断题","lo":101,"hi":150,"prevUrl":"judgment_51-100.html","nextUrl":"judgment_151-170.html","title":"2026年江苏省环卫作业技能比赛理论知识复习题库","missingText":"原题库该范围缺少判断题：149、150，本页按原题号保留空号。"};
+const QUESTIONS = JSON.parse(document.getElementById("quizData").textContent);
+
+function defaultState(){
+  return {version:1, savedAt:null, questions:{}, currentFile:PAGE_CONFIG.file, currentQuestionId:QUESTIONS[0]?.id || null};
+}
+function loadState(){
+  try{
+    const raw=localStorage.getItem(STORAGE_KEY);
+    if(!raw) return defaultState();
+    const obj=JSON.parse(raw);
+    if(!obj || typeof obj!=="object") return defaultState();
+    if(!obj.questions || typeof obj.questions!=="object") obj.questions={};
+    return {...defaultState(),...obj};
+  }catch(e){ return defaultState(); }
+}
+let state=loadState();
+
+function saveState(){
+  state.version=1;
+  state.savedAt=new Date().toISOString();
+  try{ localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); }catch(e){}
+}
+function htmlEscape(v){
+  return String(v??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+}
+function normalizeText(s){
+  return String(s??"").trim()
+    .replace(/　/g," ")
+    .replace(/[！-～]/g,ch=>String.fromCharCode(ch.charCodeAt(0)-0xFEE0))
+    .replace(/[\u2018\u2019\u201B]/g,"'")
+    .replace(/[\u201C\u201D\u201F]/g,'"')
+    .replace(/[。．]/g,".")
+    .replace(/，/g,",")
+    .replace(/：/g,":")
+    .replace(/[；;]/g,";")
+    .toLowerCase();
+}
+function typeLabel(q){
+  return q.type==="multi"?"多选题":q.type==="judgment"?"判断题":q.type==="fill"?"填空题":"选择题";
+}
+function numberLabel(q){
+  const prefix=q.type==="multi"?"多":q.type==="judgment"?"判":q.type==="fill"?"填":"选";
+  return prefix+q.globalNumber;
+}
+function questionHeader(q){
+  return `${typeLabel(q)} 第${q.globalNumber}题`;
+}
+function isAnswered(q){
+  const s=state.questions[q.id];
+  return !!(s && s.answered);
+}
+function getQState(q){ return state.questions[q.id] || {}; }
+
+function clearAnalysis(){ document.getElementById("analysis").innerHTML=""; }
+function formatAnswer(q, ans){
+  if(ans==null) return "未提供";
+  if(q.type==="multi") return ans.length ? ans.join("、") : "未提供";
+  if(q.type==="judgment") return ans;
+  if(q.type==="fill") return ans.map((x,i)=>`${["①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩"][i]||`#${i+1}`} ${x}`).join("；");
+  return String(ans);
+}
+function showAnalysis(q){
+  const box=document.getElementById("analysis");
+  const s=getQState(q);
+  if(!s.answered){ box.innerHTML=""; return; }
+  const mine=s.myAnswer;
+  const correct = q.type==="fill" ? q.blanks : q.answer;
+  const cls=s.result==="correct"?"correct":"wrong";
+  box.innerHTML =
+    `<div class="my-answer ${cls}">我的答案：${htmlEscape(formatAnswer(q,mine))}</div>`+
+    `<div class="analysis-line"><b>正确答案：</b>${htmlEscape(formatAnswer(q,correct))}</div>`+
+    `<div class="analysis-line"><b>解析：</b>${htmlEscape(q.analysis||"未提供")}</div>`+
+    `<div class="analysis-line meta"><b>来源：</b>${htmlEscape(q.source||"未提供")}</div>`+
+    `<div class="analysis-line meta"><b>难度：</b>${htmlEscape(q.difficulty||"未提供")}</div>`;
+}
+function setCurrent(q, scrollIntoView=false){
+  state.currentFile=PAGE_CONFIG.file;
+  state.currentQuestionId=q.id;
+  saveState();
+  document.querySelectorAll(".question-card.current,.num-item.current").forEach(el=>el.classList.remove("current"));
+  const card=document.getElementById(q.id);
+  const num=document.querySelector(`.num-item[data-id="${CSS.escape(q.id)}"]`);
+  if(card) card.classList.add("current");
+  if(num) num.classList.add("current");
+  showAnalysis(q);
+  if(scrollIntoView && card) card.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function applyResultClass(el,q,key,s){
+  el.classList.remove("correct","wrong","selected");
+  if(q.type==="multi"){
+    if(s.answered){
+      if(q.answer.includes(key)) el.classList.add("correct");
+      else if(s.wrongKey===key) el.classList.add("wrong");
+    }else if((s.selected||[]).includes(key)){
+      el.classList.add("selected");
+    }
+  }else{
+    if(s.answered){
+      if(key===q.answer) el.classList.add("correct");
+      if(s.result==="wrong" && key!==q.answer) el.classList.add("wrong");
+    }
+  }
+}
+function updateNumberList(){
+  document.querySelectorAll(".num-item").forEach(btn=>{
+    const q=QUESTIONS.find(x=>x.id===btn.dataset.id);
+    const s=getQState(q);
+    btn.classList.remove("correct","wrong");
+    if(s.result==="correct") btn.classList.add("correct");
+    if(s.result==="wrong") btn.classList.add("wrong");
+  });
+}
+
+function renderQuestions(){
+  const area=document.getElementById("quizArea");
+  const frag=document.createDocumentFragment();
+  QUESTIONS.forEach(q=>{
+    const card=document.createElement("article");
+    card.className="question-card";
+    card.id=q.id;
+    const head=document.createElement("div");
+    head.className="question-header";
+    head.textContent=questionHeader(q);
+    card.appendChild(head);
+
+    if(q.type==="choice" || q.type==="choice-image"){
+      if(q.images?.length){
+        const body=document.createElement("div"); body.className="question-body";
+        const stem=document.createElement("div"); stem.className="question-stem"; stem.textContent=q.stem; body.appendChild(stem);
+        const imgs=document.createElement("div"); imgs.className="question-images";
+        q.images.forEach(src=>{
+          const img=document.createElement("img"); img.src=src; img.alt="题目图片"; img.addEventListener("click",()=>openImage(src)); imgs.appendChild(img);
+        });
+        body.appendChild(imgs); card.appendChild(body);
+      }else{
+        const stem=document.createElement("div"); stem.className="question-stem"; stem.textContent=q.stem; card.appendChild(stem);
+      }
+      const opts=document.createElement("div"); opts.className="options"; opts.dataset.qid=q.id;
+      Object.entries(q.options).forEach(([key,val])=>{
+        const el=document.createElement("div"); el.className="option"; el.dataset.key=key;
+        el.innerHTML=`<b>${htmlEscape(key)}.</b> ${htmlEscape(val)}`;
+        el.addEventListener("click",()=>answerChoice(q,key));
+        opts.appendChild(el);
+      });
+      card.appendChild(opts);
+    }else if(q.type==="multi"){
+      const stem=document.createElement("div"); stem.className="question-stem"; stem.textContent=q.stem; card.appendChild(stem);
+      const opts=document.createElement("div"); opts.className="options"; opts.dataset.qid=q.id;
+      Object.entries(q.options).forEach(([key,val])=>{
+        const el=document.createElement("div"); el.className="option"; el.dataset.key=key;
+        el.innerHTML=`<b>${htmlEscape(key)}.</b> ${htmlEscape(val)}`;
+        el.addEventListener("click",()=>answerMulti(q,key));
+        opts.appendChild(el);
+      });
+      card.appendChild(opts);
+    }else if(q.type==="judgment"){
+      const stem=document.createElement("div"); stem.className="question-stem"; stem.textContent=q.stem; card.appendChild(stem);
+      const s=getQState(q);
+      if(q.answer==null){
+        const note=document.createElement("div"); note.className="question-unavailable"; note.textContent="原题库未提供本题答案，无法自动判题；本题仅供查看。"; card.appendChild(note);
+      }
+      const opts=document.createElement("div"); opts.className="options judgment"; opts.dataset.qid=q.id;
+      Object.entries(q.options).forEach(([key,val])=>{
+        const el=document.createElement("div"); el.className="option"; el.dataset.key=key; 
+        el.innerHTML=`${htmlEscape(val)}`;
+        if(q.answer==null) el.style.pointerEvents="none";
+        else el.addEventListener("click",()=>answerChoice(q,key));
+        opts.appendChild(el);
+      });
+      card.appendChild(opts);
+    }else if(q.type==="fill"){
+      const stem=document.createElement("div"); stem.className="fill-stem"; stem.textContent=q.stem; card.appendChild(stem);
+      if(!q.blanks.length){
+        const note=document.createElement("div"); note.className="question-unavailable"; note.textContent="原题库正文没有提供空位标记，因此本题无法按填空题方式提交；题干按原文保留。"; card.appendChild(note);
+      }else{
+        const inputs=document.createElement("div"); inputs.className="fill-inputs";
+        q.blanks.forEach((_,i)=>{
+          const wrap=document.createElement("label"); wrap.className="fill-input-item";
+          const label=document.createElement("span"); label.className="blank-label"; label.textContent=["①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩"][i]||`${i+1}`;
+          const input=document.createElement("input"); input.type="text"; input.maxLength=20; input.dataset.index=i; input.setAttribute("autocomplete","off");
+          input.addEventListener("input",()=>{ 
+            const s=getQState(q); const arr=(s.myAnswer||q.blanks.map(()=>"" )).slice(); arr[i]=input.value; 
+            state.questions[q.id]={...s,myAnswer:arr}; saveState();
+          });
+          wrap.appendChild(label); wrap.appendChild(input); inputs.appendChild(wrap);
+        });
+        card.appendChild(inputs);
+        const btn=document.createElement("button"); btn.className="fill-submit"; btn.textContent="提交答案"; btn.addEventListener("click",()=>answerFill(q)); card.appendChild(btn);
+      }
+    }
+    card.addEventListener("click",e=>{
+      if(e.target.closest(".option") || e.target.tagName==="INPUT" || e.target.tagName==="BUTTON") return;
+      setCurrent(q,false);
+    });
+    frag.appendChild(card);
+  });
+  area.appendChild(frag);
+  restorePageUI();
+}
+function restorePageUI(){
+  QUESTIONS.forEach(q=>{
+    const card=document.getElementById(q.id);
+    const s=getQState(q);
+    const opts=card?.querySelector(".options");
+    if(opts){
+      if(s.answered) opts.classList.add("locked");
+      opts.querySelectorAll(".option").forEach(el=>applyResultClass(el,q,el.dataset.key,s));
+    }
+    if(q.type==="fill" && q.blanks.length){
+      const inputs=[...card.querySelectorAll("input")];
+      const arr=s.myAnswer||[];
+      inputs.forEach((input,i)=>{
+        input.value=arr[i]??"";
+        if(s.answered){
+          input.disabled=true;
+          input.classList.toggle("correct",s.blankResults?.[i]==="correct");
+          input.classList.toggle("wrong",s.blankResults?.[i]==="wrong");
+        }
+      });
+      const b=card.querySelector(".fill-submit");
+      if(b && s.answered) b.disabled=true;
+    }
+  });
+  updateNumberList();
+  let q=QUESTIONS.find(x=>x.id===state.currentQuestionId) || QUESTIONS[0];
+  if(q) setCurrent(q,false);
+}
+function answerChoice(q,key){
+  const s=getQState(q);
+  if(s.answered || q.answer==null) return;
+  const result=(key===q.answer)?"correct":"wrong";
+  state.questions[q.id]={answered:true,myAnswer:key,result,wrongKey:result==="wrong"?key:null};
+  state.currentFile=PAGE_CONFIG.file; state.currentQuestionId=q.id; saveState();
+  restorePageUI(); showAnalysis(q);
+}
+function answerMulti(q,key){
+  const s=getQState(q);
+  if(s.answered) return;
+  const selected=new Set(s.selected||[]);
+  if(q.answer.includes(key)){
+    if(selected.has(key)) selected.delete(key); else selected.add(key);
+    const arr=[...selected].sort((a,b)=>a.localeCompare(b));
+    if(q.answer.every(x=>selected.has(x)) && selected.size===q.answer.length){
+      state.questions[q.id]={answered:true,myAnswer:arr,result:"correct",selected:arr};
+    }else{
+      state.questions[q.id]={...s,selected:arr,answered:false};
+    }
+  }else{
+    state.questions[q.id]={answered:true,myAnswer:[...selected,key].sort((a,b)=>a.localeCompare(b)),result:"wrong",selected:[...selected,key],wrongKey:key};
+  }
+  state.currentFile=PAGE_CONFIG.file; state.currentQuestionId=q.id; saveState();
+  restorePageUI(); showAnalysis(q);
+}
+function answerFill(q){
+  const card=document.getElementById(q.id);
+  const inputs=[...card.querySelectorAll("input")];
+  const my=inputs.map(x=>x.value);
+  const results=my.map((x,i)=>normalizeText(x)===normalizeText(q.blanks[i])?"correct":"wrong");
+  const ok=results.every(x=>x==="correct");
+  state.questions[q.id]={answered:true,myAnswer:my,result:ok?"correct":"wrong",blankResults:results};
+  state.currentFile=PAGE_CONFIG.file; state.currentQuestionId=q.id; saveState();
+  restorePageUI(); showAnalysis(q);
+}
+function bindNumberList(){
+  const list=document.getElementById("numberList");
+  QUESTIONS.forEach(q=>{
+    const btn=document.createElement("div"); btn.className="num-item"; btn.textContent=numberLabel(q); btn.dataset.id=q.id;
+    btn.addEventListener("click",()=>setCurrent(q,true)); list.appendChild(btn);
+  });
+}
+function updateCurrentByScroll(){
+  let best=QUESTIONS[0],bestDist=1e9;
+  QUESTIONS.forEach(q=>{
+    const el=document.getElementById(q.id); if(!el) return;
+    const d=Math.abs(el.getBoundingClientRect().top-90);
+    if(d<bestDist){best=q;bestDist=d;}
+  });
+  if(best && state.currentQuestionId!==best.id){
+    state.currentFile=PAGE_CONFIG.file; state.currentQuestionId=best.id; saveState();
+    document.querySelectorAll(".question-card.current,.num-item.current").forEach(el=>el.classList.remove("current"));
+    document.getElementById(best.id)?.classList.add("current");
+    document.querySelector(`.num-item[data-id="${CSS.escape(best.id)}"]`)?.classList.add("current");
+    showAnalysis(best);
+  }
+}
+function openModal(mode){
+  const modal=document.getElementById("modal");
+  modal.classList.add("show");
+  const title=document.getElementById("modalTitle"), ta=document.getElementById("modalTextarea");
+  const buttons=document.getElementById("modalButtons");
+  buttons.innerHTML="";
+  if(mode==="export"){
+    title.textContent="导出刷题进度";
+    ta.value=JSON.stringify(state,null,2); ta.readOnly=true;
+    addModalButton("复制",async()=>{try{await navigator.clipboard.writeText(ta.value)}catch(e){ta.select();document.execCommand("copy")}},false);
+    addModalButton("下载 JSON",()=>downloadJSON(ta.value),false);
+  }else{
+    title.textContent="导入刷题进度";
+    ta.value=""; ta.readOnly=false; ta.placeholder="在此粘贴导出的 JSON";
+    addModalButton("导入并恢复",()=>{
+      let obj; try{obj=JSON.parse(ta.value)}catch(e){alert("JSON 格式无效，请检查后再试。");return}
+      if(!obj || typeof obj!=="object" || !obj.questions){alert("这不是可识别的刷题进度文件。");return}
+      if(!confirm("导入将覆盖当前刷题进度，确定继续吗？")) return;
+      state=obj; saveState(); modal.classList.remove("show");
+      const file=(KNOWN_PAGES.includes(state.currentFile)?state.currentFile:"index.html");
+      if(file==="index.html") location.href="index.html"; else location.href=file+(state.currentQuestionId?("#"+encodeURIComponent(state.currentQuestionId)):"");
+    },false);
+  }
+  addModalButton("关闭",()=>modal.classList.remove("show"),false);
+}
+function addModalButton(text,fn,disabled){
+  const b=document.createElement("button"); b.className="btn"; b.textContent=text; b.disabled=!!disabled; b.addEventListener("click",fn); document.getElementById("modalButtons").appendChild(b);
+}
+function downloadJSON(text){
+  const blob=new Blob([text],{type:"application/json;charset=utf-8"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="quiz_progress.json"; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function clearProgress(){
+  if(!confirm("确定清空全部刷题进度吗？此操作不可恢复。")) return;
+  try{localStorage.removeItem(STORAGE_KEY)}catch(e){}
+  state=defaultState(); location.reload();
+}
+function openImage(src){
+  const modal=document.getElementById("imageModal"); document.getElementById("imagePreview").src=src; modal.classList.add("show");
+}
+function go(url){
+  if(url) location.href=url; 
+}
+function setupNavigation(){
+  const prevBtns=[document.getElementById("prevBtn"),document.getElementById("prevBtnM")].filter(Boolean);
+  const nextBtns=[document.getElementById("nextBtn"),document.getElementById("nextBtnM")].filter(Boolean);
+  prevBtns.forEach(b=>{if(PAGE_CONFIG.prevUrl)b.addEventListener("click",()=>go(PAGE_CONFIG.prevUrl));else b.classList.add("disabled")});
+  nextBtns.forEach(b=>{if(PAGE_CONFIG.nextUrl)b.addEventListener("click",()=>go(PAGE_CONFIG.nextUrl));else b.classList.add("disabled")});
+}
+function setupMobilePanel(){
+  const panel=document.getElementById("infoPanel"),toggle=document.getElementById("toggleBtn");
+  if(!panel||!toggle) return;
+  toggle.addEventListener("click",()=>{panel.classList.toggle("expanded");toggle.textContent=panel.classList.contains("expanded")?"收起":"展开"});
+}
+function maybeRestoreHash(){
+  const id=decodeURIComponent(location.hash.replace(/^#/,""));
+  if(id){
+    const q=QUESTIONS.find(x=>x.id===id);
+    if(q) setCurrent(q,true);
+  }
+}
+function init(){
+  document.getElementById("pageTitle").textContent=PAGE_CONFIG.title;
+  document.getElementById("pageSub").textContent=`${PAGE_CONFIG.typeLabel} · 题号 ${PAGE_CONFIG.lo}-${PAGE_CONFIG.hi} · 本页实际 ${QUESTIONS.length} 题`;
+  if(PAGE_CONFIG.missingText){
+    const n=document.createElement("div"); n.className="notice"; n.textContent=PAGE_CONFIG.missingText; document.getElementById("pageHead").appendChild(n);
+  }
+  renderQuestions(); bindNumberList(); setupNavigation(); setupMobilePanel();
+  document.getElementById("exportBtn")?.addEventListener("click",()=>openModal("export"));
+  document.getElementById("importBtn")?.addEventListener("click",()=>openModal("import"));
+  document.getElementById("clearBtn")?.addEventListener("click",clearProgress);
+  document.getElementById("modalClose")?.addEventListener("click",()=>document.getElementById("modal").classList.remove("show"));
+  window.addEventListener("scroll",()=>{ if(!window.__scrollLock){ window.__scrollLock=true; requestAnimationFrame(()=>{updateCurrentByScroll();window.__scrollLock=false})}});
+  maybeRestoreHash();
+}
+document.addEventListener("DOMContentLoaded",init);
+</script>
+</body></html>
